@@ -1,26 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'blocs/watchlist/watchlist_bloc.dart';
-import 'ui/watchlist_page.dart';
+import 'core/theme/app_theme.dart';
+import 'features/watchlist/presentation/blocs/watchlist/watchlist_bloc.dart';
+import 'features/watchlist/presentation/pages/watchlist_page.dart';
 
 void main() {
-  runApp(const Trade021App());
+  runApp(const TradeApp());
 }
 
-class Trade021App extends StatelessWidget {
-  const Trade021App({super.key});
+class TradeApp extends StatelessWidget {
+  const TradeApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '021 Trade',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.blue,
-        useMaterial3: true,
-        fontFamily: 'Roboto', // Defaulting to Roboto, but could use Google Fonts
-      ),
+      theme: AppTheme.darkTheme,
       home: BlocProvider(
         create: (context) => WatchlistBloc(),
         child: const WatchlistPage(),

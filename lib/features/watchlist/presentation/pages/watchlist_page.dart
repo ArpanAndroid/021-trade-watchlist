@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../blocs/watchlist/watchlist_bloc.dart';
-import '../../blocs/watchlist/watchlist_event.dart';
-import '../../blocs/watchlist/watchlist_state.dart';
-import 'widgets/stock_card.dart';
+import '../blocs/watchlist/watchlist_bloc.dart';
+import '../blocs/watchlist/watchlist_event.dart';
+import '../blocs/watchlist/watchlist_state.dart';
+import '../widgets/stock_card.dart';
 
 class WatchlistPage extends StatelessWidget {
   const WatchlistPage({super.key});
@@ -59,7 +59,7 @@ class WatchlistPage extends StatelessWidget {
                   animation: animation,
                   builder: (BuildContext context, Widget? child) {
                     final double animValue = Curves.easeInOut.transform(animation.value);
-                    final double elevation = lerpDouble(0, 6, animValue)!;
+                    final double elevation = _lerpDouble(0, 6, animValue)!;
                     return Material(
                       elevation: elevation,
                       color: Colors.transparent,
@@ -84,7 +84,7 @@ class WatchlistPage extends StatelessWidget {
     );
   }
 
-  double? lerpDouble(num? a, num? b, double t) {
+  double? _lerpDouble(num? a, num? b, double t) {
     if (a == null && b == null) return null;
     a ??= 0;
     b ??= 0;

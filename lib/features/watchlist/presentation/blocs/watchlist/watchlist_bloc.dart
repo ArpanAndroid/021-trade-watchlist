@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../models/stock.dart';
+import '../../../../domain/entities/stock.dart';
 import 'watchlist_event.dart';
 import 'watchlist_state.dart';
 
@@ -11,7 +11,6 @@ class WatchlistBloc extends Bloc<WatchlistEvent, WatchlistState> {
 
   void _onLoadWatchlist(LoadWatchlist event, Emitter<WatchlistState> emit) {
     emit(WatchlistLoading());
-    // Sample data
     final stocks = [
       const Stock(id: '1', symbol: 'RELIANCE', name: 'Reliance Industries', price: 2950.50, change: 15.20, changePercentage: 0.52),
       const Stock(id: '2', symbol: 'TCS', name: 'Tata Consultancy Services', price: 3840.00, change: -12.45, changePercentage: -0.32),

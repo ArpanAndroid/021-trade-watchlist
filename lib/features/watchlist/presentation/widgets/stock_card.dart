@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../models/stock.dart';
+import '../../../../domain/entities/stock.dart';
 
 class StockCard extends StatelessWidget {
   final Stock stock;
