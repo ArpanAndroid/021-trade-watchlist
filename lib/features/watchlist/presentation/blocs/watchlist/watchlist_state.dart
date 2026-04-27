@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import '../../../../domain/entities/stock.dart';
+import '../../../domain/entities/stock.dart';
 
 abstract class WatchlistState extends Equatable {
   const WatchlistState();

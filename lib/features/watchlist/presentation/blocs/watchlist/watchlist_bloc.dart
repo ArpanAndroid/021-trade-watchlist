@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../domain/entities/stock.dart';
+import '../../../domain/entities/stock.dart';
 import 'watchlist_event.dart';
 import 'watchlist_state.dart';
 
