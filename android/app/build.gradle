@@ -32,6 +32,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     defaultConfig {
         applicationId = "com.trade021.trade_021"
         minSdk = flutter.minSdkVersion
